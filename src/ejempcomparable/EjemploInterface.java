@@ -3,7 +3,6 @@ package ejempcomparable;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.TreeMap;
 
 
 
@@ -12,6 +11,7 @@ public class EjemploInterface {
 	// Creación de instancias de Comparator que luego pasaré como parámetro al metedo Arrays.sort
 	// Esté método ordenara los objetos del array en función del criterio implementado 
 	// en el método compare.
+	
 	
 	
 	// Orden ascendente  por Edad

@@ -1,5 +1,7 @@
 package ejempcomparable;
 
+import java.util.Formatter;
+
 public class Empleado implements Comparable<Empleado> {
 	
 	String nombre;
@@ -81,6 +83,11 @@ public class Empleado implements Comparable<Empleado> {
 
 	public void setColorOjos(String colorOjos) {
 		this.colorOjos = colorOjos;
+	}
+	
+	public String lineaEmpleado() {
+	
+		return  String.format("%-15s  %15.2f  %15d  %-15s\n", nombre, salario, edad,colorOjos);
 	}
 	
 	
