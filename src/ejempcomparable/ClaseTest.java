@@ -46,7 +46,7 @@ public class ClaseTest {
 			
 		});
 		
-		listaEmpleados("Ordendado por salario (clase anónima");
+		listaEmpleados("Ordendado por salario (clase anónima)");
 		
 		
 		
