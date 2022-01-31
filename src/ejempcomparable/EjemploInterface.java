@@ -81,10 +81,8 @@ public class EjemploInterface {
 			
 		}
 		
-	}
-	
-	
-	
+	 }
+	 
 	// Función máin
 	public static void main(String[] args) {
 		
@@ -117,6 +115,29 @@ public class EjemploInterface {
 		// escrito en fichero independiente igual que ComparadorSalario.java
 		
 		//imprimeEnOrden(empleados, new ComparadorSalario());
+		
+		// También se puede instanciar un objeto Comparable como clase anonima:
+		Comparator<Empleado> salarioDescendente = new Comparator<Empleado>() {
+
+			@Override
+			public int compare(Empleado o1, Empleado o2) {
+				
+				return (int) (o2.salario - o1.salario);
+			}
+		};
+		
+		System.out.println("\nOrden por SALARIO DESCENDIENTE: (clase anónima)\n");
+		imprimeEnOrden(empleados, salarioDescendente);
+		
+		// Como Comparator es un interface funcional podemos usar expresiones lambda
+		Comparator<Empleado> edadDescendiente = (Empleado o1, Empleado o2) -> o2.edad - o1.edad;
+		System.out.println("\nOrden por EDAD DESCENDIENTE (lambda):\n");
+		imprimeEnOrden(empleados, edadDescendiente);
+		// Al quedar un código reducido con las exp lambda se suele pasar la exp directamente como 
+		//parámetro del método
+		System.out.println("\nOrden por EDAD DESCENDIENTE (lambda parámetro directo):\n");
+		imprimeEnOrden(empleados, (Empleado o1, Empleado o2) -> o2.edad - o1.edad);
+			
 		
 		System.out.println("\nOrden por EDAD:\n");
 		imprimeEnOrden(empleados, ordenEdad);

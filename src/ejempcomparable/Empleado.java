@@ -1,6 +1,5 @@
 package ejempcomparable;
 
-import java.util.Formatter;
 
 public class Empleado implements Comparable<Empleado> {
 	
@@ -25,6 +24,7 @@ public class Empleado implements Comparable<Empleado> {
 	//	-  positivo si empleado > otroEmpleado
 	//  -  cero si objeto == argo  
 	// Nosotros vamos a establecer un orden atendiendo al salario
+	
 	@Override
 	public int compareTo(Empleado otroEmpleado) {
 		// metodo compare de clase Float devuelve negativo si primer argumento es menor que el segundo,
