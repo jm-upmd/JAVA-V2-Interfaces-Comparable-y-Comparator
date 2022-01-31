@@ -129,10 +129,13 @@ public class EjemploInterface {
 		System.out.println("\nOrden por SALARIO DESCENDIENTE: (clase anónima)\n");
 		imprimeEnOrden(empleados, salarioDescendente);
 		
-		// Como Comparator es un interface funcional podemos usar expresiones lambda
+		// (JDK 8 o posterior) Como Comparator es un interface funcional podemos usar expresiones lambda
+		// para instancia un objeto que lo implemente. Las exp lambda hacen el código más reducido/compacto.
 		Comparator<Empleado> edadDescendiente = (Empleado o1, Empleado o2) -> o2.edad - o1.edad;
+		
 		System.out.println("\nOrden por EDAD DESCENDIENTE (lambda):\n");
 		imprimeEnOrden(empleados, edadDescendiente);
+		
 		// Al quedar un código reducido con las exp lambda se suele pasar la exp directamente como 
 		//parámetro del método
 		System.out.println("\nOrden por EDAD DESCENDIENTE (lambda parámetro directo):\n");
